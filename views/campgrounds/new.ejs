@@ -1,0 +1,46 @@
+<% layout('/layouts/boilerPlate')%>
+    
+<div class="row">
+    <h1 class="text-center">New Campground</h1>
+        <div class="col-6 offset-3 my-5">
+            <form action="/campgrounds" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+                <div>
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="campground[title]" required>
+                    <div class="valid-feedback">
+                        Yayy! Looks good
+                      </div>
+                </div>
+                <div>
+                    <label class="form-label" for="location">Location</label>
+                    <input class="form-control" type="text" id="location" name="campground[location]" required>
+                    <div class="valid-feedback">
+                        Okay Noicee
+                      </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image(s)</label>
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control form-file-input" id="image" name="image" multiple>
+                      </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="price">Campground Price</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Rupee</span>
+                        <input type="text" id="price" class="form-control" placeholder="00/-" name="campground[price]" aria-label="price-label" aria-describedby="price-label" required>
+                        <div class="valid-feedback">
+                            Richie Rich :)
+                          </div>
+                      </div>
+                </div>
+                <div>
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea>
+                </div>
+                <div style="text-align: center;"><button class="btn btn-dark my-3">Add Campground</button></div>
+            </form>
+            <!-- <a href="/campgrounds">All Campgrounds</a> -->
+        </div>
+</div>
